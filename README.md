@@ -79,25 +79,36 @@ https://i.imgur.com/b5NQnri.png
 #### Component Architecture
 
 ``` 
-app
-|__ channels/application cable
-      |__ channel.rb
-      |__ connection.rb
-|__ controllers/
-      |__ concerns
-            |__ application_controller.rb
-            |__ authentication_controller.rb
-            |__ books_controller.rb
-            |__ author_contorller.rb
-            |__ user_controller.rb
-|__ jobs/
-      |__ application_job.rb
-|__ models
-      |__ application_record.rb
-      |__ book.rb
-      |__ author.rb
-      |__ user.rb
-
+client
+|__ node_modules
+|__ public
+|__ src
+      |__ containers
+            |__ MainContainer.jsx
+      |__ layouts
+            |__ Layout.jsx
+      |__ Screens
+            |__ Authors.jsx
+            |__ BooksCreate.jsx
+            |__ BooksDetails.jsx
+            |__ BooksEdit.jsx
+            |__ Books.jsx
+            |__ SignIn.jsx
+            |__ SignUp.jsx
+      |__ services
+            |__ api-helper.js
+            |__ auth.js
+            |__ authors.js
+            |__ books.js
+      |__ App.css
+      |__ App.js
+      |__ index.css
+      |__ index.js
+|__ .gitignore
+|__ package-lock.json
+|__ package.json
+|__ README.md
+          
 ```
 
 #### Time Estimates
