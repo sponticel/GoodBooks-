@@ -132,7 +132,7 @@ https://drive.google.com/file/d/1ugdPZZAqkOn8hB7zZpFnMwJVLw01NwK5/view?usp=shari
 
 ## Post-MVP
 
--Authorization for only sellers to edit and delete their own book added and review
+-Authorization for only user who posted review to edit and delete their own review
 -change rating to star rating
 -search by genre and/or author
 -Allow other users to comment on others reviews (maybe just a thumbs up thumbs down)
