@@ -7,18 +7,13 @@
 
 ## MVP
 
-- Full CRUD 
-- Authentication for users
-- RESTful JSON API
-
 <br>
 
 ### Goals
 
 - edit and delete reviews
-- add book and review
-- search by genre and/or author
-
+- add review
+- responsive design
 
 <br>
 
@@ -56,11 +51,8 @@ https://i.imgur.com/dq6FTKs.png
 https://i.imgur.com/RqDw0Z2.png
 - Desktop Home 
 
-https://i.imgur.com/Flms2ts.png
-- Add book and review
-
-https://i.imgur.com/5T6Y2n3.png
-- Edit/Delete Book and Review
+https://i.imgur.com/pV15Ikq.png
+- Book Details and Add/edit/delete review
 
 https://i.imgur.com/f6JC92V.png
 - Tablet Home
@@ -70,9 +62,7 @@ https://i.imgur.com/Jq3OvDk.png
 
 #### Component Tree
 
-https://i.imgur.com/b5NQnri.png
-
--Direct Link : https://drive.google.com/file/d/1P_SSL_FwN_HDSP5XFqe8IIQX7-2KRVnW/view?usp=sharing
+-Direct Link : https://app.diagrams.net/#G1P_SSL_FwN_HDSP5XFqe8IIQX7-2KRVnW
 
 #### Component Architecture
 
@@ -87,9 +77,7 @@ client
             |__ Layout.jsx
       |__ Screens
             |__ Authors.jsx
-            |__ BooksCreate.jsx
             |__ BooksDetails.jsx
-            |__ BooksEdit.jsx
             |__ Books.jsx
             |__ SignIn.jsx
             |__ SignUp.jsx
@@ -146,6 +134,7 @@ https://drive.google.com/file/d/1ugdPZZAqkOn8hB7zZpFnMwJVLw01NwK5/view?usp=shari
 
 -Authorization for only sellers to edit and delete their own book added and review
 -change rating to star rating
+-search by genre and/or author
 -Allow other users to comment on others reviews (maybe just a thumbs up thumbs down)
 ***
 
