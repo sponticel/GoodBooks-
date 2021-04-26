@@ -1,7 +1,7 @@
 
 ## Overview
 
-**goodBooks** is an react front end, ruby on rails backend app that allows users to sign in to there very own account and contribute reviews and/or ratings on different books listed. 
+**goodBooks** is a react front end, ruby on rails backend app that allows users to sign in to there very own account and contribute reviews and/or ratings on different books listed. 
 
 <br>
 
