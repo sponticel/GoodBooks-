@@ -17,14 +17,14 @@ _**GoodBooks** is an react front end, ruby on rails backend app that allows user
 
 - Full functional CRUD
 - 3 tables
-- 1 association (many to many)
+- 1 association (one to many)
 
 
 <br>
 
 ### Challenges
 
-I expect to have a challenging time finishing up the backend, I am not yet comfortable with runy syntax so i have to look things up a great deal. However I do kno where to look and have gotten better at researching and finding what I am looking for quicker.
+I expect to have a challenging time finishing up the backend, I am not yet comfortable with ruby syntax so I usually have to look things up a great deal. However I do know where to look and have gotten better at researching and finding what I am looking for quicker. Another challenge I see myself having is working with a css library, I have never used one before but I am excited to learn.
 
 <br>
 
@@ -47,53 +47,56 @@ I expect to have a challenging time finishing up the backend, I am not yet comfo
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+https://i.imgur.com/r3Pc0Rb.png
+- Desktop Sign Up
 
-![Dummy Link](url)
+https://i.imgur.com/dq6FTKs.png
 
-- Desktop Landing
+- Desktop Sign in
 
-![Dummy Link](url)
+https://i.imgur.com/RqDw0Z2.png
 
-- Desktop Hero
+- Desktop Home 
 
-![Dummy Link](url)
+https://i.imgur.com/Flms2ts.png
 
-- Resource Index
+- Add book and review
 
-![Dummy Link](url)
+https://i.imgur.com/f6JC92V.png
 
-- Resource Show
+- Tablet Home
 
-![Dummy Link](url)
+https://i.imgur.com/Jq3OvDk.png
 
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Mobile Home
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+https://i.imgur.com/b5NQnri.png
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+-Direct Link : https://drive.google.com/file/d/1P_SSL_FwN_HDSP5XFqe8IIQX7-2KRVnW/view?usp=sharing
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
-``` structure
-
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
+``` 
+app
+|__ channels/application cable
+      |__ channel.rb
+      |__ connection.rb
+|__ controllers/
+      |__ concerns
+            |__ application_controller.rb
+            |__ authentication_controller.rb
+            |__ books_controller.rb
+            |__ author_contorller.rb
+            |__ user_controller.rb
+|__ jobs/
+      |__ application_job.rb
+|__ models
+      |__ application_record.rb
+      |__ book.rb
+      |__ author.rb
+      |__ user.rb
 
 ```
 
@@ -102,9 +105,20 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Proposal | H | 8hrs| hrs | hrs |
+| Setup backend| H | 5hrs| hrs | hrs |
+| Structure files | H | 3hrs| hrs | hrs |
+| Authentication| H | 8hrs| hrs | hrs |
+| Sign up and in form | H | 5hrs| hrs | hrs |
+| Add Book and Review form | H | 5hrs| hrs | hrs |
+| Home page | H | 3hrs| hrs | hrs |
+| CSS of Home page | H | 3hrs|  hrs | hrs |
+| CSS of forms page | M | 3hrs| hrs | hrs |
+| implement Css Library | M | 6hrs| hrs | hrs |
+| Add start rating| L | 3hrs| hrs | hrs |
+| Improve layout Responsive Design | M | 3hrs| hrs | hrs|
+| Play and test out app | M | 1hrs| hrs | hrs |
+| Total | H | 56 hrs| hrs | hrs |
 
 
 
@@ -114,18 +128,16 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+https://drive.google.com/file/d/1ugdPZZAqkOn8hB7zZpFnMwJVLw01NwK5/view?usp=sharing
 <br>
 
 ***
 
 ## Post-MVP
 
--Authorization for only sellers to edit and delete their own products
+-Authorization for only sellers to edit and delete their own book added and review
 -Advanced CSS using css library
--Allow users to add new books and details
+-Allow users to search by author or genre
 ***
 
 ## Code Showcase
