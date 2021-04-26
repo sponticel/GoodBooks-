@@ -15,9 +15,9 @@ _**GoodBooks** is an react front end, ruby on rails backend app that allows user
 
 ### Goals
 
-- Full functional CRUD
-- 3 tables
-- 1 association (one to many)
+- edit and delete reviews
+- add book and review
+- search by genre and/or author
 
 
 <br>
@@ -148,7 +148,7 @@ https://drive.google.com/file/d/1ugdPZZAqkOn8hB7zZpFnMwJVLw01NwK5/view?usp=shari
 
 -Authorization for only sellers to edit and delete their own book added and review
 -Advanced CSS using css library
--Allow users to search by author or genre
+-Allow other users to comment on others reviews (maybe just a thumbs up thumbs down)
 ***
 
 ## Code Showcase
