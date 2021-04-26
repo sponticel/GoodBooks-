@@ -145,7 +145,7 @@ https://drive.google.com/file/d/1ugdPZZAqkOn8hB7zZpFnMwJVLw01NwK5/view?usp=shari
 ## Post-MVP
 
 -Authorization for only sellers to edit and delete their own book added and review
--Advanced CSS using css library
+-change rating to star rating
 -Allow other users to comment on others reviews (maybe just a thumbs up thumbs down)
 ***
 
