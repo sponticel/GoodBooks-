@@ -1,7 +1,7 @@
 
 ## Overview
 
-_**GoodBooks** is an react front end, ruby on rails backend app that allows users to sign in to there very own account and contribute reviews and/or ratings on different books listed. 
+**GoodBooks** is an react front end, ruby on rails backend app that allows users to sign in to there very own account and contribute reviews and/or ratings on different books listed. 
 
 <br>
 
@@ -51,23 +51,21 @@ https://i.imgur.com/r3Pc0Rb.png
 - Desktop Sign Up
 
 https://i.imgur.com/dq6FTKs.png
-
 - Desktop Sign in
 
 https://i.imgur.com/RqDw0Z2.png
-
 - Desktop Home 
 
 https://i.imgur.com/Flms2ts.png
-
 - Add book and review
 
-https://i.imgur.com/f6JC92V.png
+https://i.imgur.com/5T6Y2n3.png
+- Edit/Delete Book and Review
 
+https://i.imgur.com/f6JC92V.png
 - Tablet Home
 
 https://i.imgur.com/Jq3OvDk.png
-
 - Mobile Home
 
 #### Component Tree
