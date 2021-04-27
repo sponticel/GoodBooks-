@@ -30,19 +30,28 @@ puts "#{User.count} users created"
   img_url:'https://i.imgur.com/IOokcc6.jpg', synopsis:'Olive is sure she’ll have the best time at summer camp with her friend Willow – but while Olive makes quick friends with the other campers, Willow struggles to form connections and latches on to the only person she knows – Olive. It’s s’more than Olive can handle! The stress of being Willows living security blanket begins to wear on Olive and before long…the girls aren’t just fighting, they may not even be friends by the time camp is over. Will the two be able to patch things up before the final lights out?')
 
   @verity = Book.create!(
-    title:'Camp', 
-    author:'Kayla Miller', 
-    genre:'childrens', 
-    release_date: DateTime.parse('04/23/2019'), 
-    img_url:'https://i.imgur.com/IOokcc6.jpg', synopsis:'Olive is sure she’ll have the best time at summer camp with her friend Willow – but while Olive makes quick friends with the other campers, Willow struggles to form connections and latches on to the only person she knows – Olive. It’s s’more than Olive can handle! The stress of being Willows living security blanket begins to wear on Olive and before long…the girls aren’t just fighting, they may not even be friends by the time camp is over. Will the two be able to patch things up before the final lights out?')
+    title:'Verity', 
+    author:'Colleen Hoover', 
+    genre:'thriller', 
+    release_date: DateTime.parse('12/07/2018'), 
+    img_url:'https://i.imgur.com/vrCvGYT.jpg', synopsis:'OLowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish. Lowen arrives at the Crawford home, ready to sort through years of Veritys notes and outlines, hoping to find enough material to get her started. What Lowen doesnt expect to uncover in the chaotic office is an unfinished autobiography Verity never intended for anyone to read. Page after page of bone-chilling admissions, including Veritys recollection of what really happened the day her daughter died.')
 
-    @sadie = Book.create!(
-      title:'Sadie', 
-      author:'Courtney Summers', 
-      genre:'Young Adult', 
-      release_date: DateTime.parse('09/04/2018'), 
-      img_url:'https://i.imgur.com/HK5bMDi.jpg', synopsis:'A missing girl on a journey of revenge. A Serial―like podcast following the clues shes left behind. And an ending you wont be able to stop talking about.
+  @sadie = Book.create!(
+    title:'Sadie', 
+    author:'Courtney Summers', 
+    genre:'Young Adult', 
+    release_date: DateTime.parse('09/04/2018'), 
+    img_url:'https://i.imgur.com/HK5bMDi.jpg', synopsis:'A missing girl on a journey of revenge. A Serial―like podcast following the clues shes left behind. And an ending you wont be able to stop talking about.Sadie hasnt had an easy life. Growing up on her own, shes been raising her sister Mattie in an isolated small town, trying her best to provide a normal life and keep their heads above water.But when Mattie is found dead, Sadies entire world crumbles. After a somewhat botched police investigation, Sadie is determined to bring her sisters killer to justice and hits the road following a few meager clues to find him.')
 
-      Sadie hasnt had an easy life. Growing up on her own, shes been raising her sister Mattie in an isolated small town, trying her best to provide a normal life and keep their heads above water.
-      
-      But when Mattie is found dead, Sadies entire world crumbles. After a somewhat botched police investigation, Sadie is determined to bring her sisters killer to justice and hits the road following a few meager clues to find him.')
+  @thunderhead = Book.create!(
+    title:'Thunderhead', 
+    author:'Neal Shusterman', 
+    genre:'Young Adult', 
+    release_date: DateTime.parse('01/09/2018'), 
+    img_url:'https://i.imgur.com/RXnxcuX.jpg', synopsis:'Rowan has gone rogue, and has taken it upon himself to put the Scythedom through a trial by fire. Literally. In the year since Winter Conclave, he has gone off-grid, and has been striking out against corrupt scythes—not only in MidMerica, but across the entire continent. He is a dark folk hero now—“Scythe Lucifer”—a vigilante taking down corrupt scythes in flames.
+    Citra, now a junior scythe under Scythe Curie, sees the corruption and wants to help change it from the inside out, but is thwarted at every turn, and threatened by the “new order” scythes. Realizing she cannot do this alone—or even with the help of Scythe Curie and Faraday, she does the unthinkable, and risks being “deadish” so she can communicate with the Thunderhead—the only being on earth wise enough to solve the dire problems of a perfect world. But will it help solve those problems, or simply watch as perfection goes into decline?')
+
+  puts "#{Book.count} books created"
+
+  Review.create!()
+
