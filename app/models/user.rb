@@ -1,4 +1,4 @@
 class User < ApplicationRecord
   has_many :reviews
-  has_many :books
+  has_many :books, optional: true
 end
