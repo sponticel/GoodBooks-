@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_review, only: [:show, :update, :destroy]
 
   # GET /reviews
@@ -16,7 +17,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   def create
     @review = Review.new(review_params)
-
+    @review.user = @current_user
     if @review.save
       render json: @review, status: :created, location: @review
     else
