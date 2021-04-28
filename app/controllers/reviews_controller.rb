@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   end
 
   # POST /reviews
+  # not sure about line 2 and 21 check with TA
   def create
     @review = Review.new(review_params)
     @review.user = @current_user

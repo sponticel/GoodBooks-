@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_book, only: [:show, :update, :destroy]
 
   # GET /books
@@ -16,7 +17,7 @@ class BooksController < ApplicationController
   # POST /books
   def create
     @book = Book.new(book_params)
-
+    @book.user = @current_user
     if @book.save
       render json: @book, status: :created, location: @book
     else
