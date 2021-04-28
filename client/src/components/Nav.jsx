@@ -24,15 +24,15 @@ export default function Nav() {
   
   return (
     <div className={classes.root}>
-    <AppBar position="static">
+    <AppBar position="static" style={{backgroundColor: "yellow"}}>
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <IconButton edge="start" className={classes.menuButton} style={{backgroundColor: "white"}} aria-label="menu">
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" className={classes.title} style={{color: "black"}}>
           goodBooks
         </Typography>
-        <Button color="inherit">Sign In</Button>
+        <Button style={{color: "black"}}>Sign In</Button>
       </Toolbar>
     </AppBar>
   </div>
