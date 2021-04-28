@@ -1,10 +1,22 @@
 import './App.css';
-import Nav from './components/Nav'
+import Layout from './layouts/Layout';
+import { Switch, Route } from 'react-router-dom'
+import SignIn from './screens/SignIn';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <Layout >
+        <Switch>
+          <Route path= '/SignIn'>
+            <SignIn />
+          </Route>
+        </Switch>
+        
+      </Layout>
     </div>
   );
 }
