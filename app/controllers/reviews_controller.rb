@@ -9,13 +9,7 @@ class ReviewsController < ApplicationController
     render json: @reviews
   end
 
-  # GET /reviews/1
-  def show
-    render json: @review
-  end
-
   # POST /reviews
-  # not sure about line 2 and 21 check with TA
   def create
     @review = Review.new(review_params)
     @review.user = @current_user
@@ -38,11 +32,10 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
+    flash[:danger] = "Review was successfully deleted"
+        redirect_to reviews_path
   end
 
-  def get_all_book_reviews
-    @
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
