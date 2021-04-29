@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
 
-export default function SignIn(props) {
+export default function SignUp(props) {
   const [formData, setFormData] = useState({
     username: '',
+    email: '',
     password: ''
   })
-  const { username, password } = formData;
-  const { handleSignIn } = props;
+  const { username, email, password } = formData;
+  const { handleSignUp } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,12 +18,11 @@ export default function SignIn(props) {
   }
 
   return (
-    <>
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleSignIn(formData)
+        handleSignUp(formData)
       }}>
-        <h3>SignIn</h3>
+        <h3>SignUp</h3>
         <label>
           Username:
           <input
@@ -33,9 +32,17 @@ export default function SignIn(props) {
             onChange={handleChange}
           />
         </label>
-
         <br />
-
+        <label>
+          Email:
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={handleChange}
+          />
+        </label>
+        <br/>
         <label>
             Password:
             <input
@@ -46,9 +53,7 @@ export default function SignIn(props) {
             />
         </label>
         <br />
-        <Link to='/SignUp'>SignUp</Link>
         <button>Submit</button>
       </form>
-    </>
   )
 }
