@@ -47,12 +47,12 @@ export default function Nav(props) {
             </Link>
                   
           )}
-          {
+          {/* {
             currentUser &&
             <>
-              <Link style={{ textDecoration: "none", color: "black" }}>Books</Link>
+              <Link to= '' style={{ textDecoration: "none", color: "black" }}>Books</Link>
             </>
-          }  
+          }   */}
           
       </Toolbar>
     </AppBar>
