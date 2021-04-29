@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
 
+import { getAllBooks } from '../services/books'
+import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
@@ -16,15 +19,17 @@ export default function MainContainer() {
   useEffect(() => {
     const fetchReviews = async () => {
       const reviewData = await getAllReviews();
-      setFoods(reviewData);
+      setReviews(reviewData);
     }
     fetchReviews()
   }, [])
     
   
   return (
-    <div>
-      
-    </div>
+    <Switch>
+      <Route path='/books'>
+        <h3>Books</h3>
+      </Route>
+    </Switch>
   )
 }

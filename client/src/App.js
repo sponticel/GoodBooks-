@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react'
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import MainContainer from './containers/MainContainer';
 
 
 
@@ -58,7 +59,11 @@ function App() {
           <SignUp
               handleSignUp={handleSignUp}
             />
-          </Route> 
+          </Route>
+          
+          <Route path='/'>
+            <MainContainer />
+          </Route>
 
         </Switch>
 
