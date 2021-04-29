@@ -10,8 +10,8 @@ Review.destroy_all
 Book.destroy_all
 User.destroy_all
 
-@user = User.create!(username: 'Dan', email: 'dan@theman.com', password_digest: '123456')
-@user_2 = User.create!(username: 'Jovi', email: 'jovi@thechick.com', password_digest: '123456')
+@user = User.create!(username: 'Dan', email: 'dan@theman.com', password: '123456')
+@user_2 = User.create!(username: 'Jovi', email: 'jovi@thechick.com', password: '123456')
 puts "#{User.count} users created"
 
 @layla = Book.create!(
