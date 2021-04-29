@@ -29,30 +29,30 @@ export default function Nav(props) {
     <div className={classes.root}>
     <AppBar position="static" style={{backgroundColor: "yellow"}}>
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} style={{backgroundColor: "white"}} aria-label="menu">
-          <MenuIcon />
-        </IconButton>
+        {/* <IconButton edge="start" className={classes.menuButton} style={{backgroundColor: "white"}} aria-label="menu"> */}
+          {/* <MenuIcon /> */}
+        {/* </IconButton> */}
         <Typography variant="h6" className={classes.title} style={{color: "black"}}>
             goodBooks
         </Typography>
-          {currentUser ? (
+        {currentUser ? (
             <>
               <p style={{ color: "black" }}>{currentUser.username}</p>
               <br />
               <Button onClick={handleLogout}>Logout</Button>
             </>
           ) : (
-            <Link to="/login" style={{ textDecoration: "none" }}>
-              Login
+            <Link to="/SignIn" style={{ textDecoration: "none" }}>
+              Sign In
             </Link>
                   
           )}
-          {/* {
+           {/* {
             currentUser &&
             <>
               <Link to= '' style={{ textDecoration: "none", color: "black" }}>Books</Link>
             </>
-          }   */}
+          }    */}
           
       </Toolbar>
     </AppBar>
