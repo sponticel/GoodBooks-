@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 export default function ReviewEdit(props) {
   const [formData, setFormData] = useState({
     rating: '',
@@ -34,11 +35,12 @@ export default function ReviewEdit(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleEdit(formData);
+      handleEdit(id,formData);
     }}>
       <h3> Add your review </h3>
       <label>Rating:
         <select name='rating' value={rating} onChange={handleChange}>
+            <option defaultValue>--Select--</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>

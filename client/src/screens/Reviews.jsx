@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 // need help getting on book in here and user name and img
 
 export default function Reviews(props) {
-  const { reviews, book_id} = props;
+  const { reviews, book_id, handleDelete} = props;
   return (
     <div>
       <h3>Reviews</h3>
@@ -17,7 +17,9 @@ export default function Reviews(props) {
             {review.content}
           </p>
             <Link to={`/reviews/${review.id}/edit`}><button>edit</button></Link>
-            <button>delete</button>
+          <button onClick={() => {
+            handleDelete(review.id)
+            }}>delete</button>
         </React.Fragment>
       ))}
       <Link to={`/books/${book_id}/reviews/new`}><button>Add Review</button></Link>

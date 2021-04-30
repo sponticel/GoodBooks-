@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(5),
   },
 }));
 
@@ -42,7 +42,6 @@ export default function Nav(props) {
             currentUser &&
             <>
               <Link to='/' style={{ textDecoration: "none", color: "black" }}>Books</Link>
-              {/* <Link to='/reviews' style={{ textDecoration: "none", color: "black" }}>Reviews</Link> */}
             </>
           
           }

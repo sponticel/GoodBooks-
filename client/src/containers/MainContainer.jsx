@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Books from '../screens/Books';
 import ReviewCreate from '../screens/ReviewCreate'
-// import ReviewEdit from '../screens/ReviewEdit'
-
+import ReviewEdit from '../screens/ReviewEdit'
 import BookDetails from '../screens/BookDetails';
 import { getAllBooks } from '../services/books'
 import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews'
@@ -38,13 +37,21 @@ export default function MainContainer() {
   const handleEdit = async (id, formData) => {
     const reviewData = await putReview(id, formData);
     setReviews(prevState => prevState.map(review => {
-      return review.id === Number(id) ? reviewData : food
+      return review.id === Number(id) ? reviewData : review
     }))
     history.push('books/:id')
   }
   
+  
+
   return (
     <Switch>
+      <Route path='/reviews/:id/edit'>
+        <ReviewEdit
+          reviews={reviews}
+          handleEdit={handleEdit}
+        />
+      </Route>
       
       <Route path='/books/:id/reviews/new'>
         <ReviewCreate
@@ -60,7 +67,9 @@ export default function MainContainer() {
         <Books
           books={books}
         />
-      </Route> 
+      </Route>
+
+
     </Switch>
   )
 }

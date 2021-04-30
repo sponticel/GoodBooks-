@@ -1,13 +1,13 @@
 import { useState } from 'react';
 // import Reviews from './Reviews'
-
+import {useParams} from 'react-router-dom'
 export default function ReviewCreate(props) {
   const [formData, setFormData] = useState({
     rating: '',
     content: ''
   })
   const { rating, content } = formData;
-
+  const { id } = useParams();
   const { handleCreate } = props
   
   const handleChange = (e) => {
@@ -22,11 +22,12 @@ export default function ReviewCreate(props) {
     <>
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleCreate(formData);
+        handleCreate({ ...formData,book_id:id });
     }}>
       <h3> Add your review </h3>
       <label>Rating:
         <select name='rating' value={rating} onChange={handleChange}>
+            <option defaultValue>--Select--</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -42,17 +43,7 @@ export default function ReviewCreate(props) {
           value={content}
         onChange={handleChange}
         />
-      </label>
-      {/* <label>Rating:
-      <StarRatings
-            rating={rating}
-            starRatedColor="yellow"
-            changeRating={handleRating}
-            numberOfStars={5}
-            name='rating'
-      />
-      </label> */}
-        
+      </label>     
       <button>Add Review</button>
     </form>
     </>
