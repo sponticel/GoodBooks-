@@ -7,7 +7,8 @@ export default function ReviewCreate(props) {
     content: ''
   })
   const { rating, content } = formData;
-  const {  handleCreate } = props;
+
+  const { handleCreate } = props
   
   const handleChange = (e) => {
     const { name, value } = e.target;
