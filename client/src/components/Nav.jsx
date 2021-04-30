@@ -44,16 +44,16 @@ export default function Nav(props) {
           ) : (
             <Link to="/SignIn" style={{ textDecoration: "none" }}>
               Sign In
-            </Link>
-                  
+            </Link>       
           )}
-           {/* {
+          {
             currentUser &&
             <>
-              <Link to= '' style={{ textDecoration: "none", color: "black" }}>Books</Link>
+              <Link to='/books' style={{ textDecoration: "none", color: "black" }}>Books</Link>
+              <Link to='/reviews' style={{ textDecoration: "none", color: "black" }}>Reviews</Link>
             </>
-          }    */}
           
+          }
       </Toolbar>
     </AppBar>
     </div>

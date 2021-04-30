@@ -5,7 +5,7 @@ import ReviewCreate from '../screens/ReviewCreate'
 import BookDetail from '../screens/Reviews'
 import ReviewEdit from '../screens/ReviewEdit'
 import Reviews from '../screens/Reviews';
-
+import BookDetails from '../screens/BookDetails';
 import { getAllBooks } from '../services/books'
 import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews'
 
@@ -32,17 +32,25 @@ export default function MainContainer() {
   
   return (
     <Switch>
+      
+      <Route path='/books/:id'>
+        <BookDetails
+        />
+      </Route>
+
       <Route path='/books'>
         <Books
           books={books}
         />
       </Route>
 
-      <Route path='/reviews'>
+      {/* <Route path='/reviews'>
         <Reviews
-          reviews={Reviews}
+          reviews={reviews}
         />
-      </Route>
+      </Route> */}
+
+      
     </Switch>
   )
 }
