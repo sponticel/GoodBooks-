@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Books from '../screens/Books';
 import ReviewCreate from '../screens/ReviewCreate'
-import BookDetail from '../screens/Reviews'
 import ReviewEdit from '../screens/ReviewEdit'
-import Reviews from '../screens/Reviews';
 import BookDetails from '../screens/BookDetails';
 import { getAllBooks } from '../services/books'
 import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews'
@@ -32,13 +30,15 @@ export default function MainContainer() {
   
   return (
     <Switch>
+      <Route path='/books/:id/reviews/new'>
+        <ReviewCreate/>
+      </Route>
       
       <Route path='/books/:id'>
-        <BookDetails
-        />
+        <BookDetails/>
       </Route>
 
-      <Route path='/books'>
+      <Route path='/'>
         <Books
           books={books}
         />

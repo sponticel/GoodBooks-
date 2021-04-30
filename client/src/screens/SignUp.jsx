@@ -4,10 +4,9 @@ export default function SignUp(props) {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    password: '',
-    img_url: ''
+    password: ''
   })
-  const { username, email, password,img_url } = formData;
+  const { username, email, password} = formData;
   const { handleSignUp } = props;
 
   const handleChange = (e) => {
@@ -50,16 +49,6 @@ export default function SignUp(props) {
               type='password'
               name='password'
               value={password}
-              onChange={handleChange}
-            />
-        </label>
-        <br />
-        <label>
-            Avatar URL:
-            <input
-              type='img_url'
-              name='img_url'
-              value={img_url}
               onChange={handleChange}
             />
         </label>

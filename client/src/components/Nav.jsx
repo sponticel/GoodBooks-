@@ -37,7 +37,7 @@ export default function Nav(props) {
         </Typography>
         {currentUser ? (
             <>
-              <p style={{ color: "black" }}>{currentUser.username}</p>
+              <p style={{ color: "black" }}>Hi {currentUser.username}!</p>
               <br />
               <Button onClick={handleLogout}>Logout</Button>
             </>
@@ -49,8 +49,8 @@ export default function Nav(props) {
           {
             currentUser &&
             <>
-              <Link to='/books' style={{ textDecoration: "none", color: "black" }}>Books</Link>
-              <Link to='/reviews' style={{ textDecoration: "none", color: "black" }}>Reviews</Link>
+              <Link to='/' style={{ textDecoration: "none", color: "black" }}>Books</Link>
+              {/* <Link to='/reviews' style={{ textDecoration: "none", color: "black" }}>Reviews</Link> */}
             </>
           
           }
