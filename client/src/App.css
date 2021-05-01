@@ -1,5 +1,13 @@
+* {
+ border: black 1px solid;
+ text-decoration: none;
+}
 .App {
   text-align: center;
+  height: auto;
+  width: auto;
+  margin: 50px;
 }
+
 
 

@@ -1,3 +1,43 @@
-.bookCard {
-  
+.book-card {
+  display: grid;
+  grid-gap: 50px 50px;
+
+  /* flex-flow: row-wrap;
+  align-items: center;
+  margin: 50px; */
 }
+
+.middle {
+  margin: 50px;
+  flex-flow: row-wrap;
+  /* transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+  background-color: black;
+  height: 100%;
+  width: 100%; */
+}
+
+.book-cover img{
+  opacity: 1;
+
+  max-height: 232px ;
+  /* max-width: ; */
+  object-fit: contain;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  background-color: yellow;
+  background-position: "center center";
+  background-repeat: "no-repeat";
+}
+
+.middle-title, .middle-author{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+

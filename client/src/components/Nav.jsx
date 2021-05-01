@@ -7,8 +7,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1
+  nav: {
+    flexGrow: 1,
   },
   title: {
     marginRight: theme.spacing(),
@@ -25,8 +25,8 @@ export default function Nav(props) {
   const classes = useStyles();
   const { currentUser, handleLogout } = props;
   return (
-    <div className={classes.root}>
-    <AppBar position="static" style={{backgroundColor: "yellow"}}>
+    <div className={classes.nav}>
+    <AppBar  style={{backgroundColor: "yellow"}}>
       <Toolbar>
         <Typography variant="h6" className={classes.title} style={{color: "black"}}>
             goodBooks
@@ -35,6 +35,8 @@ export default function Nav(props) {
             <>
               <p className={classes.welcome} style={{ color: "black" }}>Hi {currentUser.username}, Welcome!</p>
               <br />
+              <Link to='/' style={{ textDecoration: "none", color: "black" }}>Books</Link>
+
               <Button onClick={handleLogout}>Logout</Button>
             </>
           ) : (
@@ -42,13 +44,6 @@ export default function Nav(props) {
               Sign In
             </Link>       
           )}
-          {
-            currentUser &&
-            <>
-              <Link to='/' style={{ textDecoration: "none", color: "black" }}>Books</Link>
-            </>
-          
-          }
       </Toolbar>
     </AppBar>
     </div>
