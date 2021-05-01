@@ -25,7 +25,7 @@ export default function Nav(props) {
   const classes = useStyles();
   const { currentUser, handleLogout } = props;
   return (
-    <div className={classes.nav}>
+    <div className={classes.root}>
     <AppBar  style={{backgroundColor: "yellow"}}>
       <Toolbar>
         <Typography variant="h6" className={classes.title} style={{color: "black"}}>

@@ -1,15 +1,19 @@
+
 .book-card {
   display: grid;
   grid-gap: 50px 50px;
-
-  /* flex-flow: row-wrap;
-  align-items: center;
-  margin: 50px; */
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+ 
 }
 
 .middle {
-  margin: 50px;
+  margin: 10px;
+  padding: 8px;
   flex-flow: row-wrap;
+  background-color: yellow;
+  border: black 0.5px solid;
+  width: 300px;
   /* transition: .5s ease;
   opacity: 0;
   display: flex;
@@ -36,8 +40,8 @@
 
 .middle-title, .middle-author{
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   color: black;
 }
 
