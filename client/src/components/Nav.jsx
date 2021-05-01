@@ -8,12 +8,16 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   title: {
-    flexGrow: 1,
-    marginRight: theme.spacing(5),
+    marginRight: theme.spacing(),
+    fontWeight: 900, 
   },
+
+  welcome: {
+    flex: 1,
+  }
 }));
 
 
@@ -29,7 +33,7 @@ export default function Nav(props) {
         </Typography>
         {currentUser ? (
             <>
-              <p style={{ color: "black" }}>Hi {currentUser.username}!</p>
+              <p className={classes.welcome} style={{ color: "black" }}>Hi {currentUser.username}, Welcome!</p>
               <br />
               <Button onClick={handleLogout}>Logout</Button>
             </>
