@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ReviewEdit.css'
 
-
 export default function ReviewEdit(props) {
   const [formData, setFormData] = useState({
     rating: '',
@@ -25,30 +24,30 @@ export default function ReviewEdit(props) {
     }
   }, [reviews])
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }))
-  }
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+      }))
+    }
 
-  return (
+    return (
     <form onSubmit={(e) => {
       e.preventDefault();
       handleEdit(id,formData);
     }}>
       <h3> Add your review </h3>
       <div className='review-container'>
-      <label>Rating:
-        <select name='rating' value={rating} onChange={handleChange}>
-            <option defaultValue>--Select--</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
+        <label>Rating:
+          <select name='rating' value={rating} onChange={handleChange}>
+              <option defaultValue>--Select--</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+          </select>
         </label>
         <br/>
         <textarea
@@ -56,7 +55,7 @@ export default function ReviewEdit(props) {
           name='content'
           placeholder="Did you enjoy the book?"  
           value={content}
-        onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <button>Edit</button>

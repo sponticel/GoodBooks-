@@ -5,7 +5,7 @@ import ReviewCreate from '../screens/ReviewCreate'
 import ReviewEdit from '../screens/ReviewEdit'
 import BookDetails from '../screens/BookDetails';
 import { getAllBooks } from '../services/books'
-import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews'
+import { getAllReviews, postReview, putReview } from '../services/reviews'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
@@ -17,7 +17,7 @@ export default function MainContainer() {
       const bookData = await getAllBooks();
       setBooks(bookData);
     }
-    fetchBooks()
+  fetchBooks()
   }, [])
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function MainContainer() {
       const reviewData = await getAllReviews();
       setReviews(reviewData);
     }
-    fetchReviews()
+  fetchReviews()
   }, [])
   
   const handleCreate = async (formData) => {
@@ -37,13 +37,11 @@ export default function MainContainer() {
   const handleEdit = async (id, formData) => {
     const reviewData = await putReview(id, formData);
     setReviews(prevState => prevState.map(review => {
-      return review.id === Number(id) ? reviewData : review
+    return review.id === Number(id) ? reviewData : review
     }))
     history.push('books/:id')
   }
   
-  
-
   return (
     <Switch>
       <Route path='/reviews/:id/edit'>
@@ -52,24 +50,19 @@ export default function MainContainer() {
           handleEdit={handleEdit}
         />
       </Route>
-      
       <Route path='/books/:id/reviews/new'>
         <ReviewCreate
           handleCreate={handleCreate}
         />
       </Route>
-      
       <Route path='/books/:id'>
         <BookDetails/>
       </Route>
-
       <Route path='/'>
         <Books
           books={books}
         />
       </Route>
-
-
     </Switch>
   )
 }

@@ -9,7 +9,6 @@ export default function SignUp(props) {
   })
   const { username, email, password} = formData;
   const { handleSignUp } = props;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -36,9 +35,7 @@ export default function SignUp(props) {
             onChange={handleChange}
           />
         </label>
-
         <br />
-
         <label>
           Email:
           <input
@@ -50,16 +47,16 @@ export default function SignUp(props) {
         </label>
         <br/>
         <label>
-            Password:
-            <input
-              type='password'
-              name='password'
-              value={password}
-              onChange={handleChange}
+          Password:
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
             />
         </label>
         <br/>
-          <button>Sign Up</button>
+        <button>Sign Up</button>
         </div>
       </form>
     </div>

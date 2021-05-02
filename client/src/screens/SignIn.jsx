@@ -25,19 +25,17 @@ export default function SignIn(props) {
         handleSignIn(formData)
       }}>
         <div className="input-container">
-        <label>
-          Username:
-          <input
+          <label>
+            Username:
+            <input
             type='text'
             name='username'
             value={username}
             onChange={handleChange}
-          />
-        </label>
-
-        <br />
-
-        <label>
+            />
+          </label>
+          <br />
+          <label>
             Password:
             <input
               type='password'
@@ -45,10 +43,10 @@ export default function SignIn(props) {
               value={password}
               onChange={handleChange}
             />
-        </label>
-        <br/>
-        <button>Sign In</button>
-        <br/>
+          </label>
+          <br/>
+          <button>Sign In</button>
+          <br/>
           <Link to='/SignUp'>Welcome! SignUp to create and account!</Link>
         </div>
       </form>
