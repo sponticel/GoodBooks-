@@ -13,7 +13,7 @@ export default function Reviews(props) {
       {reviews?.map(review => (
         <React.Fragment key={review.id}>
           <p className='review-container'>
-            {review.user_id} {review.book_id} Rating of {review.rating}/5 {review.content}
+            {review.user.username}'s Rating: {review.rating}/5 {review.content}
           </p>
             <Link to={`/reviews/${review.id}/edit`}><button>edit</button></Link>
           <button onClick={() => {

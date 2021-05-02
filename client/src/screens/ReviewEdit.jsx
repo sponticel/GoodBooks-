@@ -39,6 +39,7 @@ export default function ReviewEdit(props) {
       handleEdit(id,formData);
     }}>
       <h3> Add your review </h3>
+      <div className='review-container'>
       <label>Rating:
         <select name='rating' value={rating} onChange={handleChange}>
             <option defaultValue>--Select--</option>
@@ -48,8 +49,8 @@ export default function ReviewEdit(props) {
             <option>4</option>
             <option>5</option>
         </select>
-      </label>
-      <label>Review:
+        </label>
+        <br/>
         <textarea
           type='text'
           name='content'
@@ -57,7 +58,7 @@ export default function ReviewEdit(props) {
           value={content}
         onChange={handleChange}
         />
-      </label>
+      </div>
       <button>Edit</button>
     </form>
   )

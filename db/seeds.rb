@@ -54,7 +54,7 @@ puts "#{User.count} users created"
   release_date: DateTime.parse("09/04/2018 11:00"), 
   img_url:'https://i.imgur.com/HK5bMDi.jpg', 
   synopsis:'A missing girl on a journey of revenge. A Serial―like podcast following the clues shes left behind. And an ending you wont be able to stop talking about.Sadie hasnt had an easy life. Growing up on her own, shes been raising her sister Mattie in an isolated small town, trying her best to provide a normal life and keep their heads above water.But when Mattie is found dead, Sadies entire world crumbles. After a somewhat botched police investigation, Sadie is determined to bring her sisters killer to justice and hits the road following a few meager clues to find him.',
-  user: @user_2
+  user: @user
 )
 
 @thunderhead = Book.create!(

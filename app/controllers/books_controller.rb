@@ -11,8 +11,8 @@ class BooksController < ApplicationController
 
   # GET /books/1
   def show
-    render json: @book, include: [:reviews, :user]
-
+    # render json: @book, include: [:reviews, :user]
+    render json: @book.as_json(except: [:user],include: [{reviews: {include: :user}}, :user])
   end
 
   private

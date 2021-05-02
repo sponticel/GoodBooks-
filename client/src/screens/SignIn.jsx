@@ -24,7 +24,6 @@ export default function SignIn(props) {
         e.preventDefault();
         handleSignIn(formData)
       }}>
-        <h3>SignIn</h3>
         <div className="input-container">
         <label>
           Username:
@@ -50,7 +49,7 @@ export default function SignIn(props) {
         <br/>
         <button>Submit</button>
         <br/>
-          <Link to='/SignUp'>SignUp</Link>
+          <Link to='/SignUp'>Welcome! SignUp to create and account!</Link>
         </div>
       </form>
     </div>

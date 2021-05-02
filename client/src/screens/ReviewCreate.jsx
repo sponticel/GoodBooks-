@@ -39,7 +39,6 @@ export default function ReviewCreate(props) {
             <option>5</option>
         </select>
       </label>
-      <label>Review:
         <textarea
           type='text'
           name='content'
@@ -47,7 +46,6 @@ export default function ReviewCreate(props) {
           value={content}
               onChange={handleChange}
         />
-          </label>
       </div>   
       <button>Add Review</button>
     </form>
