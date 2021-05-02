@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { getOneBook } from '../services/books'
 import { useParams } from 'react-router-dom'
+import { deleteReview } from '../services/reviews'
 import Reviews from './Reviews'
-import {deleteReview} from '../services/reviews'
+import './BookDetails.css'
+
 export default function BookDetails() {
 
   const params = useParams()
@@ -26,15 +28,18 @@ export default function BookDetails() {
   }
 
   return (
-    <div>
-      <h3>Book Details</h3>
-      <p>{title}</p>
-      <p>{author}</p>
-      <p>{genre}</p>
-      <p>{release_date}</p>
-      <p>{synopsis}</p>
-      <img src={img_url} />
-      <Reviews reviews={reviews} book_id={params.id} handleDelete={handleDelete}/>
-    </div>
+    <div className='detail-container'>
+      <div className= 'book-detail'>
+          <h3 className='title'>{title}</h3>
+          <p>By: {author}</p>
+          <p>Genre: {genre}</p>
+          <p>{release_date}</p>
+          {synopsis}
+          <div className= 'book-cover'><img src={img_url} /></div>
+      </div>
+      <div className='reviews-container'>
+        <Reviews reviews={reviews} book_id={params.id} handleDelete={handleDelete} />
+        </div>
+  </div>
   )
 }

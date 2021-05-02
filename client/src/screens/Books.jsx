@@ -6,7 +6,7 @@ export default function Books(props) {
   const { books } = props;
   return (
     <>
-    <h3>Books</h3>
+    <h3>PICK A BOOK TO GET MORE DETAILS</h3>
     <div className='book-card'>
       
       {books.map(book => (
