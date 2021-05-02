@@ -1,6 +1,7 @@
 .book-container {
   padding: 250px;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .book-detail {
   object-fit: contain;
