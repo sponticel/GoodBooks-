@@ -15,7 +15,7 @@ export default function Reviews(props) {
             <br/>
             {review.content}
           </p>
-          <Link to={`/reviews/${review.id}/edit`}><button>edit</button></Link>
+          <Link to={`/reviews/${review.id}/edit`}><button>Edit</button></Link>
           <button onClick={() => { handleDelete(review.id) }}>
             Delete
           </button>

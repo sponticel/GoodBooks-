@@ -1,8 +1,5 @@
 import { useState } from 'react';
-// import Reviews from './Reviews'
 import { useParams } from 'react-router-dom'
-// import './ReviewCreate.css'
-
 
 export default function ReviewCreate(props) {
   const [formData, setFormData] = useState({
