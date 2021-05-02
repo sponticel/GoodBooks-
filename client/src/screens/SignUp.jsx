@@ -26,6 +26,7 @@ export default function SignUp(props) {
       }}>
         <div className="input-container"></div>
         <h3 className="signup-welcome">Welcome! If you already have an account Sign In.</h3>
+        <div className='inner-input'>
         <label>
           Username:
           <input
@@ -58,7 +59,8 @@ export default function SignUp(props) {
             />
         </label>
         <br/>
-        <button>Sign Up</button>
+          <button>Sign Up</button>
+        </div>
       </form>
     </div>
   )
