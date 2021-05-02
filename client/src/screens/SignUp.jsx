@@ -19,11 +19,13 @@ export default function SignUp(props) {
   }
 
   return (
+    <div className='form-container'>
       <form onSubmit={(e) => {
         e.preventDefault();
         handleSignUp(formData)
       }}>
-        <h3>SignUp</h3>
+        <div className="input-container"></div>
+        <h3 className="signup-welcome">Welcome! If you already have an account Sign In.</h3>
         <label>
           Username:
           <input
@@ -33,7 +35,9 @@ export default function SignUp(props) {
             onChange={handleChange}
           />
         </label>
+
         <br />
+
         <label>
           Email:
           <input
@@ -53,7 +57,9 @@ export default function SignUp(props) {
               onChange={handleChange}
             />
         </label>
-        <button>Submit</button>
+        <br/>
+        <button>Sign Up</button>
       </form>
+    </div>
   )
 }
