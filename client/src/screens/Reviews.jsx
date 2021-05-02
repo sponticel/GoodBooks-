@@ -9,7 +9,7 @@ export default function Reviews(props) {
   return (
     <div>
       <Link to={`/books/${book_id}/reviews/new`}><button>Add Review</button></Link>
-      <h3>Reviews</h3>
+      <h3>Reviews for</h3>
       {reviews?.map(review => (
         <React.Fragment key={review.id}>
           <p className='review-container'>

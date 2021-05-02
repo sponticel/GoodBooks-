@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './SignIn.css'
 
 export default function SignIn(props) {
   const [formData, setFormData] = useState({
@@ -18,12 +19,13 @@ export default function SignIn(props) {
   }
 
   return (
-    <>
+    <div className='form-container'>
       <form onSubmit={(e) => {
         e.preventDefault();
         handleSignIn(formData)
       }}>
         <h3>SignIn</h3>
+        <div className="input-container">
         <label>
           Username:
           <input
@@ -45,10 +47,12 @@ export default function SignIn(props) {
               onChange={handleChange}
             />
         </label>
-        <br />
-        <Link to='/SignUp'>SignUp</Link>
+        <br/>
         <button>Submit</button>
+        <br/>
+          <Link to='/SignUp'>SignUp</Link>
+        </div>
       </form>
-    </>
+    </div>
   )
 }

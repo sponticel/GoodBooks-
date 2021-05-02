@@ -2,6 +2,7 @@
   text-decoration: none;
   color: black;
   text-align: center;
+  font-family: 'New Tegomin', serif;
 }
 .App {
   padding: 80px;
@@ -24,8 +25,10 @@ button {
   border-color: black; 
   padding: 12px 28px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
   width: 100px;
+  margin: 10px;
 }
 
 .button:hover {

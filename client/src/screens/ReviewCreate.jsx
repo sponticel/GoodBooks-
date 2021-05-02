@@ -1,6 +1,9 @@
 import { useState } from 'react';
 // import Reviews from './Reviews'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import './ReviewCreate.css'
+
+
 export default function ReviewCreate(props) {
   const [formData, setFormData] = useState({
     rating: '',
@@ -24,7 +27,8 @@ export default function ReviewCreate(props) {
       e.preventDefault();
         handleCreate({ ...formData,book_id:id });
     }}>
-      <h3> Add your review </h3>
+        <h3> Add your review </h3>
+      <div className='review-container'>
       <label>Rating:
         <select name='rating' value={rating} onChange={handleChange}>
             <option defaultValue>--Select--</option>
@@ -41,9 +45,10 @@ export default function ReviewCreate(props) {
           name='content'
           placeholder="Did you enjoy the book?"  
           value={content}
-        onChange={handleChange}
+              onChange={handleChange}
         />
-      </label>     
+          </label>
+      </div>   
       <button>Add Review</button>
     </form>
     </>
