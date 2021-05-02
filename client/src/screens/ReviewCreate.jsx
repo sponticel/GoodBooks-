@@ -38,7 +38,8 @@ export default function ReviewCreate(props) {
             <option>4</option>
             <option>5</option>
         </select>
-      </label>
+          </label>
+          <br/>
         <textarea
           type='text'
           name='content'

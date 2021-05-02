@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 export default function Nav(props) {
   const classes = useStyles();
   const { currentUser, handleLogout } = props;
+
   return (
     <div className={classes.root}>
     <AppBar  style={{backgroundColor: "yellow"}}>
@@ -31,15 +31,16 @@ export default function Nav(props) {
         <Typography variant="h6" className={classes.title} style={{color: "black"}}>
             goodBooks
         </Typography>
-        {currentUser ? (
+          {currentUser ? (
             <>
               <p className={classes.welcome} style={{ color: "black" }}>Hi {currentUser.username}, Welcome!</p>
-              <br />
+              <br/>
               <Link to='/' style={{ textDecoration: "none", color: "black" }}>Books</Link>
-
               <Button onClick={handleLogout}>Logout</Button>
             </>
-          ) : (
+          )
+          :
+          (
             <Link to="/SignIn" style={{ textDecoration: "none" }}>
               Sign In
             </Link>       

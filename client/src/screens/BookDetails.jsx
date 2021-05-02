@@ -33,12 +33,16 @@ export default function BookDetails() {
           <h3 className='title'>{title}</h3>
           <p>By: {author}</p>
           <p>Genre: {genre}</p>
-          <p>{release_date}</p>
+          <p>Released on: {release_date}</p>
           {synopsis}
-          <div className= 'book-cover'><img src={img_url} /></div>
+      <div className= 'book-cover'><img src={img_url} /></div>
       </div>
       <div className='reviews-container'>
-        <Reviews reviews={reviews} book_id={params.id} handleDelete={handleDelete} />
+        <Reviews
+          reviews={reviews}
+          book_id={params.id}
+          handleDelete={handleDelete}
+        />
         </div>
   </div>
   )
