@@ -1,11 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import './Reviews.css'
-
-// need help getting on book in here and user name 
 
 export default function Reviews(props) {
-  const { reviews, book_id, handleDelete} = props;
+  const { reviews, book_id, handleDelete } = props;
+  
   return (
     <div>
       <Link to={`/books/${book_id}/reviews/new`}><button>Add Review</button></Link>
@@ -13,15 +11,16 @@ export default function Reviews(props) {
       {reviews?.map(review => (
         <React.Fragment key={review.id}>
           <p className='review-container'>
-            {review.user.username}'s Rating: {review.rating}/5 {review.content}
+            <b>{review.user.username}'s Rating: {review.rating}/5</b>
+            <br/>
+            {review.content}
           </p>
-            <Link to={`/reviews/${review.id}/edit`}><button>edit</button></Link>
-          <button onClick={() => {
-            handleDelete(review.id)
-            }}>delete</button>
+          <Link to={`/reviews/${review.id}/edit`}><button>edit</button></Link>
+          <button onClick={() => { handleDelete(review.id) }}>
+            Delete
+          </button>
         </React.Fragment>
       ))}
-      
     </div>
   )
 }

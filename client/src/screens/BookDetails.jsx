@@ -31,11 +31,11 @@ export default function BookDetails() {
     <div className='detail-container'>
       <div className= 'book-detail'>
           <h3 className='title'>{title}</h3>
-          <p>By: {author}</p>
           <p>Genre: {genre}</p>
+          <p>By: {author}</p>
           <p>Released on: {release_date}</p>
-          {synopsis}
       <div className= 'book-cover'><img src={img_url} /></div>
+          <p>{synopsis}</p>
       </div>
       <div className='reviews-container'>
         <Reviews
