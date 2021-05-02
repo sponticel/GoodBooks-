@@ -6,9 +6,9 @@ import Reviews from './Reviews'
 import './BookDetails.css'
 
 export default function BookDetails() {
-
   const params = useParams()
   const [bookData, setBookData] = useState({})
+  
   useEffect(() => {
     const fetchBook = async () => {
       const bookData = await getOneBook(params.id)
@@ -34,7 +34,7 @@ export default function BookDetails() {
           <p>Genre: {genre}</p>
           <p>By: {author}</p>
           <p>Released on: {release_date}</p>
-      <div className= 'book-cover'><img src={img_url} /></div>
+          <div className= 'book-cover'><img src={img_url} /></div>
           <p>{synopsis}</p>
       </div>
       <div className='reviews-container'>
@@ -43,7 +43,7 @@ export default function BookDetails() {
           book_id={params.id}
           handleDelete={handleDelete}
         />
-        </div>
+      </div>
   </div>
   )
 }
