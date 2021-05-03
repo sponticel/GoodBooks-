@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SignUp.css'
 
 export default function SignUp(props) {
   const [formData, setFormData] = useState({
@@ -6,9 +7,8 @@ export default function SignUp(props) {
     email: '',
     password: ''
   })
-  const { username, email, password } = formData;
+  const { username, email, password} = formData;
   const { handleSignUp } = props;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -18,11 +18,14 @@ export default function SignUp(props) {
   }
 
   return (
+    <div className='form-container'>
       <form onSubmit={(e) => {
         e.preventDefault();
         handleSignUp(formData)
       }}>
-        <h3>SignUp</h3>
+        <div className="input-container"></div>
+        <h3 className="signup-welcome">Welcome! If you already have an account Sign In.</h3>
+        <div className='inner-input'>
         <label>
           Username:
           <input
@@ -44,16 +47,18 @@ export default function SignUp(props) {
         </label>
         <br/>
         <label>
-            Password:
-            <input
-              type='password'
-              name='password'
-              value={password}
-              onChange={handleChange}
+          Password:
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
             />
         </label>
-        <br />
-        <button>Submit</button>
+        <br/>
+        <button>Sign Up</button>
+        </div>
       </form>
+    </div>
   )
 }

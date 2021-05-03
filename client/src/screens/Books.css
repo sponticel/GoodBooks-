@@ -1,0 +1,48 @@
+.book-card {
+  display: grid;
+  grid-gap: 50px 50px;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+  justify-content: center;
+}
+
+h3 {
+  color: yellow;
+}
+
+.middle {
+  margin: 10px;
+  padding: 8px;
+  flex-flow: row-wrap;
+  background-color: yellow;
+  border: black 0.5px solid;
+  width: 300px;
+}
+
+.book-cover img{
+  opacity: 1;
+  max-height: 232px ;
+  object-fit: contain;
+  background-color: yellow;
+  background-position: "center center";
+  background-repeat: "no-repeat";
+}
+
+.middle-title {
+  position: relative;
+  color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  .book-card {
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: auto;
+    padding: 10px;
+    justify-content: center;
+  }
+  .middle {
+    width: 200px;
+  }
+}
+

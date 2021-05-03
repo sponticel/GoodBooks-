@@ -32,8 +32,6 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
-    flash[:danger] = "Review was successfully deleted"
-        redirect_to reviews_path
   end
 
 

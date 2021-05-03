@@ -39,6 +39,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    history.push('/')
   }
 
   return (
@@ -46,27 +47,18 @@ function App() {
       <Layout
         currentUser={currentUser}
         handleLogout={handleLogout}
-    >
+      >
         <Switch>
-          
           <Route path= '/SignIn'>
-            <SignIn
-              handleSignIn={handleSignIn}
-            />
+            <SignIn handleSignIn={handleSignIn}/>
           </Route>
-
           <Route path= '/SignUp'> 
-          <SignUp
-              handleSignUp={handleSignUp}
-            />
+            <SignUp handleSignUp={handleSignUp}/>
           </Route>
-          
           <Route path='/'>
             <MainContainer />
           </Route>
-
         </Switch>
-
       </Layout>
     </div>
   );

@@ -1,0 +1,63 @@
+.book-container {
+  padding-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-detail {
+  object-fit: contain;
+  background-color: yellow;
+  width: 80%;
+  padding: 10px;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  text-align: left;
+  align-items: stretch;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+} 
+
+.book-cover {
+  padding: 20px;
+}
+
+.title {
+  color: black;
+}
+
+.review-container {
+  object-fit: contain;
+  background-position: "center center";
+  background-repeat: "no-repeat";
+  background-color: yellow;
+  width: 60%;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  textarea {
+    width: 60%; 
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .book-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    flex-direction: column;
+  }
+  img {
+    width: 100px;
+  }
+}
