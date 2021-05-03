@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import './ReviewEdit.css'
+
 
 export default function ReviewEdit(props) {
   const [formData, setFormData] = useState({
@@ -10,8 +11,10 @@ export default function ReviewEdit(props) {
   const { rating, content } = formData;
   const { reviews, handleEdit } = props;
   const { id } = useParams();
-
-  useEffect(()=> {
+  // const history = useHistory()
+  const [redirect, setRedirect] = useState(false)
+  
+  useEffect(() => {
     const prefillFormData = () => {
       const reviewItem = reviews.find(review => review.id === Number(id) )
       setFormData({
@@ -34,10 +37,13 @@ export default function ReviewEdit(props) {
   
   const handleSubmit = async(e) => {
     e.preventDefault();
-    await handleEdit(id,formData);
+    await handleEdit(id, formData);
+    // history.push('books/:id')
+    setRedirect(true)
   }
-  
-
+  if (redirect === true) {
+    return <Redirect to = 'book/:id'/>
+  }
     return (
     <form onSubmit={(e) => {
       handleSubmit(e)
