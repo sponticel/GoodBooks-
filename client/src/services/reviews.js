@@ -1,6 +1,5 @@
 import api from './api-helper';
-import React from 'react';
-import axios from 'axios';
+
 
 
 export const getAllReviews = async () => {

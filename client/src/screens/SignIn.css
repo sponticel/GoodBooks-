@@ -22,7 +22,7 @@ input {
   margin: 5px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   /* For mobile phones: */
   .form-container {
     width: 200px;
