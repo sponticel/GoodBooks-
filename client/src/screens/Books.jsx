@@ -12,7 +12,7 @@ export default function Books(props) {
         <Link to={`/books/${book.id}`}>
         <div key={book.id}>
           <div className="middle">
-            <div className='book-cover'><img src={book.img_url} /></div>
+            <div className='book-cover'><img src={book.img_url} alt='cover'/></div>
             <h2 className="middle-title">{book.title}</h2>
             <h5>{book.author}</h5>
           </div>
