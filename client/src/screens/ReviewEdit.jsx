@@ -31,11 +31,16 @@ export default function ReviewEdit(props) {
         [name]: value
       }))
     }
+  
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    await handleEdit(id,formData);
+  }
+  
 
     return (
     <form onSubmit={(e) => {
-      e.preventDefault();
-      handleEdit(id,formData);
+      handleSubmit(e)
     }}>
       <h3> Add your review </h3>
       <div className='review-container'>
