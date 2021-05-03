@@ -39,6 +39,7 @@ export default function MainContainer() {
     setReviews(prevState => prevState.map(review => {
     return review.id === Number(id) ? reviewData : review
     }))
+    history.push(`books/${id}`)
   }
   
   return (

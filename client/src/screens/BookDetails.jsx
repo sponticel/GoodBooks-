@@ -15,7 +15,7 @@ export default function BookDetails() {
       setBookData(bookData)
     }
   fetchBook()
-  }, [])
+  }, [params.id])
   
   const{title, author, genre, release_date, img_url,synopsis, reviews}  = bookData
   
