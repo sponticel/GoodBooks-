@@ -42,3 +42,20 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media only screen and (max-width: 1000px) {
+  textarea {
+    width: 60%; 
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .book-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    flex-direction: column;
+  
+  }
+}
